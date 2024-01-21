@@ -1,0 +1,21 @@
+<h1 style="text-align: center;">Parent and Child</h1>
+
+<hr>
+
+<table>
+    <thead>
+        <th>
+            <app-child 
+                [parentMessage]="'Il genitore chiama'"
+                (childEvent)="childEvent($event)">
+            </app-child>
+        </th>
+
+        <th>
+            <app-parent (childEvent)="receiveMessage($event)">
+            </app-parent>
+        </th>
+    </thead>
+</table>
+
+<hr>
