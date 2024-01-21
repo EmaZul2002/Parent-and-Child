@@ -2,20 +2,12 @@
 
 <hr>
 
-<table>
-    <thead>
-        <th>
-            <app-child 
-                [parentMessage]="'Il genitore chiama'"
-                (childEvent)="childEvent($event)">
-            </app-child>
-        </th>
+<app-child [parentMessage]="'Il genitore chiama'">
+</app-child>
 
-        <th>
-            <app-parent (childEvent)="receiveMessage($event)">
-            </app-parent>
-        </th>
-    </thead>
-</table>
+<hr>
+
+<app-parent>
+</app-parent>
 
 <hr>
