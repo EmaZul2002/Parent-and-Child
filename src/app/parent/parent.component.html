@@ -1,1 +1,9 @@
-<h2>Parent</h2>
+<app-child [parentMessage]="parentMessage"
+    (childEvent)="receiveMessage($event)">
+</app-child>
+
+<p *ngIf="visualizza">Figlio: {{message}}</p>
+
+<p>Contatore: {{contatore}}</p>
+
+<p *ngIf="contatore>=5">!!! HAI VINTO !!!</p>

@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 export class ChildComponent {
   @Input() parentMessage: string | undefined
-  @Output() childEvent = new EventEmitter<String>()
+  @Output() childEvent = new EventEmitter<string>()
 
   sendMessage() {
     this.childEvent.emit("Il figlio risponde")

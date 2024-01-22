@@ -6,10 +6,18 @@ import { Component, Input } from '@angular/core';
   styleUrl: './parent.component.css'
 })
 export class ParentComponent {
-  parentMessage = "Il genitore chiama"
+  parentMessage : string = "Il genitore chiama"
 
-  receiveMessage($event: string) {
-    const receiveMessage = $event
+  message : string = ""
+
+  visualizza : boolean = false
+
+  contatore : number = 0
+
+  receiveMessage(childMessage: string) {
+    this.message = childMessage
+    this.visualizza = true
+    this.contatore++
   }
   
 }
