@@ -5,6 +5,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './child.component.html',
   styleUrl: './child.component.css'
 })
+
 export class ChildComponent {
   @Input() parentMessage: string | undefined
   @Output() childEvent = new EventEmitter<String>()

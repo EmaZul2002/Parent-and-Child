@@ -2,7 +2,8 @@
 
 <hr>
 
-<app-child [parentMessage]="'Il genitore chiama'">
+<app-child [parentMessage]="'Il genitore chiama'"
+    (eventChild)="sendMessage($event)">
 </app-child>
 
 <hr>
